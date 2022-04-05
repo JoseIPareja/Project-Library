@@ -7,10 +7,11 @@
 
 body {
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     background-image: url(img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rebeccapurple;
     color: white;
 }
 
@@ -18,50 +19,63 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-rows: 2fr 14fr 1fr;
+    grid-template-rows: 1fr 2fr 14fr 1fr;
     text-align: center;
 }
 
 .header {
+    grid-row: 1 / 2;
     background-color: black;
     opacity: 80%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.maincontent {
-    display: grid;
-    grid-template-rows: 1fr 14fr;
-}
-
 .top {
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 5px;
+    padding: 2px;
 }
 
-.addbookbutton {
-    padding: 5px;
-    background: none;
-    color: white;
-    border-radius: 5px;
-    border-color: white;
-    font-weight: bold;
+form {
+    border: 4px solid white;
+    max-width: 250px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 8px;
 }
 
-.addbookbutton:hover {
-    background-color: black;
+h2 {
+    padding: 10px;
 }
 
-.cards {
-    grid-row: 2 / 3;
+input {
+    margin: 10px;
+    max-width: 200px;
+}
+
+button {
+    margin: 10px;
+    width: 80px;
+    align-self: center;
+}
+
+.maincontent {
+    grid-row: 3 / 4;
+    display: grid;
 }
 
 .footer {
+    grid-row: 4 / 5;
     background-color: black;
     opacity: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

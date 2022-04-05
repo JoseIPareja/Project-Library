@@ -6,44 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="gridcontainer">
         <div class="header">myLibrary</div>
-        <div class="maincontent">
-            <div class="top">
-                <button class="addbookbutton" type="button">+Add Book</button>
-            </div>
-            <div class="cards">
-                <div class="popup">
-                    <form>
-                        <div class="close-btn">&times;</div>
-                        <h2>Add your Book</h2>
-                        <div class="fieldset">
-                            <label for="title">Title</label>
-                            <input type="text" id="title">
-                        </div>
-                        <div class="fieldset">
-                            <label for="author">Author</label>
-                            <input type="text" id="author">
-                        </div>
-                        <div class="fieldset">
-                            <label for="pages">N°Pages</label>
-                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="pages">
-                        </div>
-                        <div class="fieldset">
-                            <h4>Have you read it?</h4>
-                            <label for="yes">Yes</label>
-                            <input type="radio" id="yes" name="haveread" value="yes">
-                            <label for="no">No</label>
-                            <input type="radio" id="no" name="haveread" value="no">
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="top">
+            <form>
+                <h2>Add a book!</h2>
+                <input class="title" type="text" placeholder="Title" required>
+                <input class="author" type="text" placeholder="Author" required>
+                <button class="addbutton" type="button">Add</button>
+            </form>
         </div>
-        <div class="footer">Made by Jose Ignacio Pareja</div>
+        <div class="maincontent">
+        </div>
+        <div class="footer">
+            <p>Made by Jose Ignacio Pareja</p>
+        </div>
     </div>
 </body>
 </html>

@@ -12,22 +12,25 @@ const book2 = {
 
 let myLibrary = [book1, book2];
 
-// CONSTRUCTOR DE OBJETOS, CADA OBJETO = LIBRO
-function Book(title, author, pages) {
+// OBJECT BOOK CONSTRUCTOR
+function bookGenerator(title, author) {
     this.title = title,
-    this.author = author,
-    this.pages = pages;
+    this.author = author;
 }
 
-// POP UP FUNCTION BOOK
-const addbookbutton = document.querySelector('.addbookbutton');
+// FUNCTION FOR ADDING A BOOK TO ARRAY
 
-// ARCHIVAR EN myLibrary (Cuando el usuario haga click en agregar)
+const title = document.querySelector('.title');
+const author = document.querySelector('.author');
+
 function addBookToLibrary() {
-    let book3 = new (Book);
+    let book = new bookGenerator(title.value, author.value);
+    myLibrary.push(book);
+    console.log(myLibrary);
 }
 
-console.log(myLibrary.length+1);
+document.querySelector('.addbutton').addEventListener('click', addBookToLibrary);
+console.log(myLibrary);
 
-// Loop EN myLibrary, Y DISPLAY EN MAIN CONTENT (Tmb cuando el usuario haga click en agregar)
-// CADA ITERACION EN UN DIV CARD NUEVO DENTRO DE MAIN CONTENT
+// Loop myLibrary & Display on maincontent
+
